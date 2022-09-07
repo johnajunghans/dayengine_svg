@@ -1,0 +1,170 @@
+svg:not(:root) {
+    overflow: visible;  
+}
+
+@font-face{
+    font-family: Elemental;
+    src: url(../Fonts/Elemental-lg5B0.ttf);
+}
+
+@keyframes spin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+:root{
+    --theme-color-1: rgba(128, 0, 128, 1);
+    --theme-color-2: rgba(0, 100, 0, 1);
+}
+
+#nav-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+nav div{
+    margin: 20px;
+}
+
+nav div a{
+    text-decoration: none;
+}
+
+#svg-wrapper{
+    height: 800;
+    position: relative;
+}
+
+#wheel-outer-ring{
+    fill: none;
+    stroke: var(--theme-color-1);
+    stroke-width: 50; 
+}
+
+#wheel-white-line{
+    fill: none;
+    stroke: white;
+    stroke-width: 12;
+}
+
+#wheel-outer-circle{
+    fill: none;
+    stroke: var(--theme-color-2);
+    stroke-width: 5;
+    margin: auto;
+}
+
+.grey-lines{
+    fill: none;
+    stroke-width: 2;
+    stroke: rgba(0,0,0,0.25);
+}
+
+.hour-markers-1{
+    font-family: Elemental;
+    fill: white;
+    transform-origin: center;
+}
+
+.hour-markers-2{
+    font-family: Elemental;
+    fill: white;
+    transform-origin: center;
+}
+
+.habit-container:hover{
+    fill: rgba(0, 0, 0, 0.25);
+}
+
+#wheel-inner-circle{
+    fill: var(--theme-color-1);
+}
+
+.habit-buttons{
+    /* stroke: white; */
+    stroke-width: 5;
+    fill: transparent;
+    /* transition: 0.5s; */
+}
+
+.habit-buttons:hover{
+    fill: rgba(0, 0, 0, 0.25);
+}
+
+#add-habit-button{
+    stroke: white;
+    stroke-width: 5;
+    fill: var(--theme-color-2);
+    transition: 0.5s;
+}
+  
+#add-habit-button-wrapper:hover > #add-habit-button{
+    fill: white;
+    stroke: var(--theme-color-2);
+}
+
+#add-habit-button-wrapper:hover > #add-habit-button-sign{
+    fill: var(--theme-color-2);
+    display: block;   
+}
+
+#add-habit-button-wrapper:hover tspan{
+    display: block;
+}
+#add-habit-button-sign{
+    font-size: 50px;
+    fill: white;
+    transform-origin: center;
+}
+
+tspan{
+    font-size: 10px;
+    font-family: Elemental;
+    font-weight: bold;
+    display: none;
+}
+
+.habit-path{
+    fill: transparent;
+    stroke: var(--theme-color-2);
+    stroke-width: 2;
+}
+
+.habit-name{
+    font-weight: bold;
+    font-family: Elemental;
+    fill: var(--theme-color-1);
+    transform-origin: center;
+}
+
+#wheel-edit-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    width: 528px;
+    height: 110px;
+    border: 1px dotted black;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+#add-habit-form-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#add-habit-form-popup{
+    text-align: center;
+    margin: 20% auto;
+    background: var(--theme-color);
+    padding: 20px;
+    position: relative;
+    max-width: 250px;
+    height: 370px;
+}
